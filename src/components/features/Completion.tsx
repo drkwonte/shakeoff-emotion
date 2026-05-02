@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
+
 
 interface CompletionProps {
   onReset: () => void;

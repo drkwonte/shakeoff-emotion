@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { Badge } from '@/components/ui/badge';
+
 import {
   Dialog,
   DialogContent,
@@ -17,19 +17,11 @@ interface EmotionInputProps {
   onBurn: (text: string, tags: string[]) => void;
 }
 
-const EMOTION_TAGS = ['분노', '우울', '불안', '자책', '억울함', '짜증', '외로움'];
+
 
 const EmotionInput: React.FC<EmotionInputProps> = ({ onBurn }) => {
   const [text, setText] = useState('');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const toggleTag = (tag: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
-    );
-  };
-
   const isReadyToBurn = text.trim().length >= 10;
 
   const handleBurnClick = () => {
@@ -40,7 +32,7 @@ const EmotionInput: React.FC<EmotionInputProps> = ({ onBurn }) => {
 
   const confirmBurn = () => {
     setIsDialogOpen(false);
-    onBurn(text, selectedTags);
+    onBurn(text, []);
   };
 
   return (
