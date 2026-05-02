@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/shakeoff_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ShakeOff - 당신의 마음을 위한 디지털 소각로. 힘든 기억과 감정을 쏟아내고 완전히 불태워버리세요. 데이터 저장도, 공유도 없습니다." />
+    <meta name="keywords" content="감정 쓰레기통, 스트레스 해소, 익명 일기, 마음 치유, 디지털 소각로, ShakeOff" />
+    <title>ShakeOff - 감정을 불태우는 소각로</title>
+
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+      <filter id="burn-edge">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="5" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="40" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
