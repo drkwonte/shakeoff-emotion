@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shakeoff-emotion.pages.dev/sitemap.xml
