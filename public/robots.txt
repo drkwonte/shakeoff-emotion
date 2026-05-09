@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shakeoff-emotion.pages.dev/sitemap.xml
+Sitemap: https://shakeoff.intothebetter.com/sitemap.xml
+
